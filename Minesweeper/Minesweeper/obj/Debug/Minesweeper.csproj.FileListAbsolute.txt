@@ -9,3 +9,5 @@ C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.GameScreen.resources
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Options.resources
