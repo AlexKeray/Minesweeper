@@ -16,5 +16,11 @@ namespace Minesweeper
         {
             InitializeComponent();
         }
+
+        private void return_to_menu_from_options(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
