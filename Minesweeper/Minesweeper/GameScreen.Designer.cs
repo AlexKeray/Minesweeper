@@ -52,6 +52,7 @@
             this.minesField.RowTemplate.Height = 24;
             this.minesField.Size = new System.Drawing.Size(949, 577);
             this.minesField.TabIndex = 1;
+            this.minesField.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.minesField_CellMouseDown);
             // 
             // GameScreen
             // 
