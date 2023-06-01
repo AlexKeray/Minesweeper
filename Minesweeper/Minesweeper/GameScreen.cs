@@ -64,12 +64,29 @@ namespace Minesweeper
 
         private void nullifyMinesField()
         {
+            minesField.DefaultCellStyle.Font = new Font("Arial", 28);
             for (int i = 0; i < minesField.RowCount; i++)
             {
                 for (int j = 0; j < minesField.ColumnCount; j++)
                 {
                     minesField.Rows[i].Cells[j].Value = null;
+                    if (OptionsFileHandler.difficulty == "easy")
+                    {
+                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 28);       //selecting the font
 
+                    }
+                    else if (OptionsFileHandler.difficulty == "medium")
+                    {
+                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 18);       //selecting the font
+
+
+                    }
+                    else if (OptionsFileHandler.difficulty == "hard")
+                    {
+                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 12);       //selecting the font
+
+                    }
+                    minesField.Rows[i].Cells[j].Style.BackColor = Color.White;
                 }
             }
         }
