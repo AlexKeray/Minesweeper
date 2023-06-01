@@ -37,7 +37,7 @@
             // 
             this.gameScreenToMenuBtn.Location = new System.Drawing.Point(12, 12);
             this.gameScreenToMenuBtn.Name = "gameScreenToMenuBtn";
-            this.gameScreenToMenuBtn.Size = new System.Drawing.Size(245, 88);
+            this.gameScreenToMenuBtn.Size = new System.Drawing.Size(196, 88);
             this.gameScreenToMenuBtn.TabIndex = 0;
             this.gameScreenToMenuBtn.Text = "Menu";
             this.gameScreenToMenuBtn.UseVisualStyleBackColor = true;
@@ -46,7 +46,7 @@
             // minesField
             // 
             this.minesField.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.minesField.Location = new System.Drawing.Point(280, 12);
+            this.minesField.Location = new System.Drawing.Point(214, 12);
             this.minesField.Name = "minesField";
             this.minesField.RowHeadersWidth = 51;
             this.minesField.RowTemplate.Height = 24;

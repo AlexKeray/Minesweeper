@@ -19,7 +19,7 @@ namespace Minesweeper
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
+
         }
 
         private void start_game(object sender, EventArgs e)
@@ -36,6 +36,11 @@ namespace Minesweeper
             this.Hide();
             options.ShowDialog();
             this.Show();
+        }
+
+        private void exitApplicationBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

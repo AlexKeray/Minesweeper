@@ -17,15 +17,24 @@ namespace Minesweeper
             InitializeComponent();
         }
 
+        private void OptionsMenu_Load(object sender, EventArgs e)
+        {
+            OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
+
+            usernameTextbox.Text = OptionsFileHandler.username;
+
+            load_difficulty_radiobuttons();
+        }
+
         private void return_to_menu_from_options(object sender, EventArgs e)
         {
-            configure_options();
+            save_difficulty_options();
             OptionsFileHandler.WriteTextFile(@"OptionsFile.txt");
             this.Close();
 
         }
 
-        private void configure_options()
+        private void save_difficulty_options()
         {
             if(difficultyEasy.Checked)
             {
@@ -35,81 +44,64 @@ namespace Minesweeper
             {
                 OptionsFileHandler.difficulty = "medium";
             }
-            else if(difficultyMedium.Checked)
+            else if(difficultyHard.Checked)
             {
                 OptionsFileHandler.difficulty = "hard";
             }
-            OptionsFileHandler.username = usernameTextbox.Text;
         }
 
-        private void difficultyEasy_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!difficultyEasy.Checked)
-            {
-                difficultyEasy.Checked = true;
-                difficultyMedium.Checked = false;
-                difficultyHard.Checked = false;
-                configure_options();
-            }
-        }
-
-        private void difficultyMedium_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!difficultyMedium.Checked)
-            {
-                difficultyEasy.Checked = false;
-                difficultyMedium.Checked = true;
-                difficultyHard.Checked = false;
-                configure_options();
-
-            }
-        }
-
-        private void difficultyHard_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!difficultyHard.Checked)
-            {
-                difficultyEasy.Checked = false;
-                difficultyMedium.Checked = false;
-                difficultyHard.Checked = true;
-                configure_options();
-
-            }
-        }
 
         private void change_username(object sender, EventArgs e)
         {
             OptionsFileHandler.username = usernameTextbox.Text;
         }
 
-        private void OptionsMenu_Load(object sender, EventArgs e)
-        {
-            usernameTextbox.Text = OptionsFileHandler.username;
+        
 
+        private void load_difficulty_radiobuttons()
+        {
             if (OptionsFileHandler.difficulty == "easy")
             {
                 difficultyEasy.Checked = true;
                 difficultyMedium.Checked = false;
                 difficultyHard.Checked = false;
-                configure_options();
 
             }
-            else if(OptionsFileHandler.difficulty == "medium")
+            else if (OptionsFileHandler.difficulty == "medium")
             {
                 difficultyEasy.Checked = false;
                 difficultyMedium.Checked = true;
                 difficultyHard.Checked = false;
-                configure_options();
 
             }
-            else if(OptionsFileHandler.difficulty == "medium")
+            else if (OptionsFileHandler.difficulty == "hard")
             {
                 difficultyEasy.Checked = false;
                 difficultyMedium.Checked = false;
                 difficultyHard.Checked = true;
-                configure_options();
 
             }
+        }
+
+        private void click_difficultyEasy_radioBtn(object sender, EventArgs e)
+        {
+            difficultyEasy.Checked = true;
+            difficultyMedium.Checked = false;
+            difficultyHard.Checked = false;
+        }
+
+        private void click_difficultyMedium_radioBtn(object sender, EventArgs e)
+        {
+            difficultyEasy.Checked = false;
+            difficultyMedium.Checked = true;
+            difficultyHard.Checked = false;
+        }
+
+        private void click_difficultyHard_radioBtn(object sender, EventArgs e)
+        {
+            difficultyEasy.Checked = false;
+            difficultyMedium.Checked = false;
+            difficultyHard.Checked = true;
         }
     }
 }

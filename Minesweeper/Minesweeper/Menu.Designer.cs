@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.startGameBtn = new System.Windows.Forms.Button();
-            this.scoreboardBtn = new System.Windows.Forms.Button();
             this.optionsBtn = new System.Windows.Forms.Button();
+            this.exitApplicationBtn = new System.Windows.Forms.Button();
+            this.menuTitleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startGameBtn
             // 
-            this.startGameBtn.Location = new System.Drawing.Point(540, 258);
+            this.startGameBtn.Location = new System.Drawing.Point(545, 334);
             this.startGameBtn.Name = "startGameBtn";
             this.startGameBtn.Size = new System.Drawing.Size(462, 90);
             this.startGameBtn.TabIndex = 0;
@@ -43,18 +44,9 @@
             this.startGameBtn.UseVisualStyleBackColor = true;
             this.startGameBtn.Click += new System.EventHandler(this.start_game);
             // 
-            // scoreboardBtn
-            // 
-            this.scoreboardBtn.Location = new System.Drawing.Point(540, 354);
-            this.scoreboardBtn.Name = "scoreboardBtn";
-            this.scoreboardBtn.Size = new System.Drawing.Size(462, 90);
-            this.scoreboardBtn.TabIndex = 1;
-            this.scoreboardBtn.Text = "Scoreboard";
-            this.scoreboardBtn.UseVisualStyleBackColor = true;
-            // 
             // optionsBtn
             // 
-            this.optionsBtn.Location = new System.Drawing.Point(540, 450);
+            this.optionsBtn.Location = new System.Drawing.Point(545, 430);
             this.optionsBtn.Name = "optionsBtn";
             this.optionsBtn.Size = new System.Drawing.Size(462, 90);
             this.optionsBtn.TabIndex = 2;
@@ -62,26 +54,48 @@
             this.optionsBtn.UseVisualStyleBackColor = true;
             this.optionsBtn.Click += new System.EventHandler(this.go_to_options);
             // 
+            // exitApplicationBtn
+            // 
+            this.exitApplicationBtn.Location = new System.Drawing.Point(545, 526);
+            this.exitApplicationBtn.Name = "exitApplicationBtn";
+            this.exitApplicationBtn.Size = new System.Drawing.Size(462, 90);
+            this.exitApplicationBtn.TabIndex = 3;
+            this.exitApplicationBtn.Text = "Exit";
+            this.exitApplicationBtn.UseVisualStyleBackColor = true;
+            this.exitApplicationBtn.Click += new System.EventHandler(this.exitApplicationBtn_Click);
+            // 
+            // menuTitleLabel
+            // 
+            this.menuTitleLabel.AutoSize = true;
+            this.menuTitleLabel.Location = new System.Drawing.Point(733, 137);
+            this.menuTitleLabel.Name = "menuTitleLabel";
+            this.menuTitleLabel.Size = new System.Drawing.Size(88, 16);
+            this.menuTitleLabel.TabIndex = 4;
+            this.menuTitleLabel.Text = "Minesweeper";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.menuTitleLabel);
+            this.Controls.Add(this.exitApplicationBtn);
             this.Controls.Add(this.optionsBtn);
-            this.Controls.Add(this.scoreboardBtn);
             this.Controls.Add(this.startGameBtn);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button startGameBtn;
-        private System.Windows.Forms.Button scoreboardBtn;
         private System.Windows.Forms.Button optionsBtn;
+        private System.Windows.Forms.Button exitApplicationBtn;
+        private System.Windows.Forms.Label menuTitleLabel;
     }
 }
 

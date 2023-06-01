@@ -39,7 +39,7 @@
             // 
             // optionsToMenuBtn
             // 
-            this.optionsToMenuBtn.Location = new System.Drawing.Point(598, 442);
+            this.optionsToMenuBtn.Location = new System.Drawing.Point(689, 514);
             this.optionsToMenuBtn.Name = "optionsToMenuBtn";
             this.optionsToMenuBtn.Size = new System.Drawing.Size(245, 88);
             this.optionsToMenuBtn.TabIndex = 0;
@@ -49,44 +49,47 @@
             // 
             // difficultyEasy
             // 
+            this.difficultyEasy.AutoCheck = false;
             this.difficultyEasy.AutoSize = true;
-            this.difficultyEasy.Location = new System.Drawing.Point(652, 190);
+            this.difficultyEasy.Location = new System.Drawing.Point(774, 284);
             this.difficultyEasy.Name = "difficultyEasy";
             this.difficultyEasy.Size = new System.Drawing.Size(59, 20);
             this.difficultyEasy.TabIndex = 1;
             this.difficultyEasy.TabStop = true;
             this.difficultyEasy.Text = "Easy";
             this.difficultyEasy.UseVisualStyleBackColor = true;
-            this.difficultyEasy.CheckedChanged += new System.EventHandler(this.difficultyEasy_CheckedChanged);
+            this.difficultyEasy.Click += new System.EventHandler(this.click_difficultyEasy_radioBtn);
             // 
             // difficultyMedium
             // 
+            this.difficultyMedium.AutoCheck = false;
             this.difficultyMedium.AutoSize = true;
-            this.difficultyMedium.Location = new System.Drawing.Point(652, 228);
+            this.difficultyMedium.Location = new System.Drawing.Point(774, 322);
             this.difficultyMedium.Name = "difficultyMedium";
             this.difficultyMedium.Size = new System.Drawing.Size(76, 20);
             this.difficultyMedium.TabIndex = 2;
             this.difficultyMedium.TabStop = true;
             this.difficultyMedium.Text = "Medium";
             this.difficultyMedium.UseVisualStyleBackColor = true;
-            this.difficultyMedium.CheckedChanged += new System.EventHandler(this.difficultyMedium_CheckedChanged);
+            this.difficultyMedium.Click += new System.EventHandler(this.click_difficultyMedium_radioBtn);
             // 
             // difficultyHard
             // 
+            this.difficultyHard.AutoCheck = false;
             this.difficultyHard.AutoSize = true;
-            this.difficultyHard.Location = new System.Drawing.Point(652, 267);
+            this.difficultyHard.Location = new System.Drawing.Point(774, 361);
             this.difficultyHard.Name = "difficultyHard";
             this.difficultyHard.Size = new System.Drawing.Size(58, 20);
             this.difficultyHard.TabIndex = 3;
             this.difficultyHard.TabStop = true;
             this.difficultyHard.Text = "Hard";
             this.difficultyHard.UseVisualStyleBackColor = true;
-            this.difficultyHard.CheckedChanged += new System.EventHandler(this.difficultyHard_CheckedChanged);
+            this.difficultyHard.Click += new System.EventHandler(this.click_difficultyHard_radioBtn);
             // 
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(649, 151);
+            this.difficultyLabel.Location = new System.Drawing.Point(771, 245);
             this.difficultyLabel.Name = "difficultyLabel";
             this.difficultyLabel.Size = new System.Drawing.Size(59, 16);
             this.difficultyLabel.TabIndex = 4;
@@ -95,7 +98,7 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(649, 356);
+            this.usernameLabel.Location = new System.Drawing.Point(717, 437);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(73, 16);
             this.usernameLabel.TabIndex = 5;
@@ -103,7 +106,7 @@
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(743, 356);
+            this.usernameTextbox.Location = new System.Drawing.Point(811, 437);
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(100, 22);
             this.usernameTextbox.TabIndex = 6;

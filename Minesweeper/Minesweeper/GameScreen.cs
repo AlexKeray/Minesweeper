@@ -12,6 +12,8 @@ namespace Minesweeper
 {
     public partial class GameScreen : Form
     {
+        int bombs_count = 0;
+
         public GameScreen()
         {
             InitializeComponent();
@@ -24,17 +26,18 @@ namespace Minesweeper
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+
+            OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
             implementDifficulty();
-            chooseCellSize(30);
+            chooseCellSize();
             minesFieldFormatSettings();
             
 
-                 //configuring the size of the field
 
             
-            
+            //temporary fill the matrix
             MinesMatrix minesMatrix = new MinesMatrix();
-            int[,] matrix = minesMatrix.FetchMatrix(minesField.RowCount, minesField.ColumnCount, 16);
+            int[,] matrix = minesMatrix.FetchMatrix(minesField.RowCount, minesField.ColumnCount, bombs_count);
             for (int i = 0; i < minesField.RowCount; i++)     
             {
                 for (int j = 0; j < minesField.ColumnCount; j++)
@@ -49,7 +52,6 @@ namespace Minesweeper
         {
             int colcount = 10;
             int rowcount = 10;
-            int bombs_count = 10;
             if (OptionsFileHandler.difficulty == "easy")
             {
                 colcount = 10;
@@ -71,9 +73,24 @@ namespace Minesweeper
             minesField.ColumnCount = colcount;      //setting the field
             minesField.RowCount = rowcount;         //setting the field
         }
-        private void chooseCellSize(int size)
+        private void chooseCellSize()
         {
-            int cellSize = size;
+            int cellSize = 0;
+            if (OptionsFileHandler.difficulty == "easy")
+            {
+                cellSize = 66;
+            }
+            else if (OptionsFileHandler.difficulty == "medium")
+            {
+                cellSize = 42;
+
+            }
+            else if (OptionsFileHandler.difficulty == "hard")
+            {
+                cellSize = 33;
+
+            }
+
             for (int i = 0; i < minesField.RowCount; i++)     //configuring the size of the field-tiles
             {
                 for (int j = 0; j < minesField.ColumnCount; j++)
