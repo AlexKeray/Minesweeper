@@ -36,9 +36,10 @@
             // 
             // startGameBtn
             // 
-            this.startGameBtn.Location = new System.Drawing.Point(545, 334);
+            this.startGameBtn.Location = new System.Drawing.Point(525, 385);
+            this.startGameBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.startGameBtn.Name = "startGameBtn";
-            this.startGameBtn.Size = new System.Drawing.Size(462, 90);
+            this.startGameBtn.Size = new System.Drawing.Size(346, 73);
             this.startGameBtn.TabIndex = 0;
             this.startGameBtn.Text = "Start game";
             this.startGameBtn.UseVisualStyleBackColor = true;
@@ -46,9 +47,10 @@
             // 
             // optionsBtn
             // 
-            this.optionsBtn.Location = new System.Drawing.Point(545, 430);
+            this.optionsBtn.Location = new System.Drawing.Point(525, 463);
+            this.optionsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionsBtn.Name = "optionsBtn";
-            this.optionsBtn.Size = new System.Drawing.Size(462, 90);
+            this.optionsBtn.Size = new System.Drawing.Size(346, 73);
             this.optionsBtn.TabIndex = 2;
             this.optionsBtn.Text = "Options";
             this.optionsBtn.UseVisualStyleBackColor = true;
@@ -56,9 +58,10 @@
             // 
             // exitApplicationBtn
             // 
-            this.exitApplicationBtn.Location = new System.Drawing.Point(545, 526);
+            this.exitApplicationBtn.Location = new System.Drawing.Point(525, 541);
+            this.exitApplicationBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitApplicationBtn.Name = "exitApplicationBtn";
-            this.exitApplicationBtn.Size = new System.Drawing.Size(462, 90);
+            this.exitApplicationBtn.Size = new System.Drawing.Size(346, 73);
             this.exitApplicationBtn.TabIndex = 3;
             this.exitApplicationBtn.Text = "Exit";
             this.exitApplicationBtn.UseVisualStyleBackColor = true;
@@ -67,21 +70,23 @@
             // menuTitleLabel
             // 
             this.menuTitleLabel.AutoSize = true;
-            this.menuTitleLabel.Location = new System.Drawing.Point(733, 137);
+            this.menuTitleLabel.Location = new System.Drawing.Point(666, 225);
+            this.menuTitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.menuTitleLabel.Name = "menuTitleLabel";
-            this.menuTitleLabel.Size = new System.Drawing.Size(88, 16);
+            this.menuTitleLabel.Size = new System.Drawing.Size(70, 13);
             this.menuTitleLabel.TabIndex = 4;
             this.menuTitleLabel.Text = "Minesweeper";
             // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.menuTitleLabel);
             this.Controls.Add(this.exitApplicationBtn);
             this.Controls.Add(this.optionsBtn);
             this.Controls.Add(this.startGameBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);

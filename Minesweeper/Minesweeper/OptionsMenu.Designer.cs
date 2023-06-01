@@ -39,9 +39,10 @@
             // 
             // optionsToMenuBtn
             // 
-            this.optionsToMenuBtn.Location = new System.Drawing.Point(689, 514);
+            this.optionsToMenuBtn.Location = new System.Drawing.Point(598, 470);
+            this.optionsToMenuBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.optionsToMenuBtn.Name = "optionsToMenuBtn";
-            this.optionsToMenuBtn.Size = new System.Drawing.Size(245, 88);
+            this.optionsToMenuBtn.Size = new System.Drawing.Size(184, 72);
             this.optionsToMenuBtn.TabIndex = 0;
             this.optionsToMenuBtn.Text = "Menu";
             this.optionsToMenuBtn.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             this.difficultyEasy.AutoCheck = false;
             this.difficultyEasy.AutoSize = true;
-            this.difficultyEasy.Location = new System.Drawing.Point(774, 284);
+            this.difficultyEasy.Location = new System.Drawing.Point(661, 283);
+            this.difficultyEasy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.difficultyEasy.Name = "difficultyEasy";
-            this.difficultyEasy.Size = new System.Drawing.Size(59, 20);
+            this.difficultyEasy.Size = new System.Drawing.Size(48, 17);
             this.difficultyEasy.TabIndex = 1;
             this.difficultyEasy.TabStop = true;
             this.difficultyEasy.Text = "Easy";
@@ -64,9 +66,10 @@
             // 
             this.difficultyMedium.AutoCheck = false;
             this.difficultyMedium.AutoSize = true;
-            this.difficultyMedium.Location = new System.Drawing.Point(774, 322);
+            this.difficultyMedium.Location = new System.Drawing.Point(661, 314);
+            this.difficultyMedium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.difficultyMedium.Name = "difficultyMedium";
-            this.difficultyMedium.Size = new System.Drawing.Size(76, 20);
+            this.difficultyMedium.Size = new System.Drawing.Size(62, 17);
             this.difficultyMedium.TabIndex = 2;
             this.difficultyMedium.TabStop = true;
             this.difficultyMedium.Text = "Medium";
@@ -77,9 +80,10 @@
             // 
             this.difficultyHard.AutoCheck = false;
             this.difficultyHard.AutoSize = true;
-            this.difficultyHard.Location = new System.Drawing.Point(774, 361);
+            this.difficultyHard.Location = new System.Drawing.Point(661, 345);
+            this.difficultyHard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.difficultyHard.Name = "difficultyHard";
-            this.difficultyHard.Size = new System.Drawing.Size(58, 20);
+            this.difficultyHard.Size = new System.Drawing.Size(48, 17);
             this.difficultyHard.TabIndex = 3;
             this.difficultyHard.TabStop = true;
             this.difficultyHard.Text = "Hard";
@@ -89,34 +93,37 @@
             // difficultyLabel
             // 
             this.difficultyLabel.AutoSize = true;
-            this.difficultyLabel.Location = new System.Drawing.Point(771, 245);
+            this.difficultyLabel.Location = new System.Drawing.Point(659, 251);
+            this.difficultyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(59, 16);
+            this.difficultyLabel.Size = new System.Drawing.Size(50, 13);
             this.difficultyLabel.TabIndex = 4;
             this.difficultyLabel.Text = "Difficulty:";
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(717, 437);
+            this.usernameLabel.Location = new System.Drawing.Point(619, 407);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(73, 16);
+            this.usernameLabel.Size = new System.Drawing.Size(58, 13);
             this.usernameLabel.TabIndex = 5;
             this.usernameLabel.Text = "Username:";
             // 
             // usernameTextbox
             // 
-            this.usernameTextbox.Location = new System.Drawing.Point(811, 437);
+            this.usernameTextbox.Location = new System.Drawing.Point(689, 407);
+            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(100, 22);
+            this.usernameTextbox.Size = new System.Drawing.Size(76, 20);
             this.usernameTextbox.TabIndex = 6;
             this.usernameTextbox.TextChanged += new System.EventHandler(this.change_username);
             // 
             // OptionsMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.difficultyLabel);
@@ -124,6 +131,7 @@
             this.Controls.Add(this.difficultyMedium);
             this.Controls.Add(this.difficultyEasy);
             this.Controls.Add(this.optionsToMenuBtn);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "OptionsMenu";
             this.Text = "Options";
             this.Load += new System.EventHandler(this.OptionsMenu_Load);

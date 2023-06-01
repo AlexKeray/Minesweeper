@@ -16,9 +16,10 @@ namespace Minesweeper
     {
         int bombs_count = 0;
         int blank_cells_count = 0;
+        int progressPoints = 0;
         public static int[,] matrix;
         Font chosenFont;
-        
+
 
         public GameScreen()
         {
@@ -32,20 +33,33 @@ namespace Minesweeper
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            loadGame();
 
-            OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
-            implementDifficulty();
-            chooseCellSize();
-            chooseFont();
-            minesFieldFormatSettings();
-            
 
-            
-            MinesMatrix minesMatrix = new MinesMatrix();
-            matrix = minesMatrix.FetchMatrix(minesField.RowCount, minesField.ColumnCount, bombs_count);
+        }
 
-            nullifyMinesField();
-            
+        private void prepareGameInfo()
+        {
+            gameProgressBar.Value = 0;
+            if (OptionsFileHandler.difficulty == "easy")
+            {
+                totalBombsCountLabel.Text = 10.ToString();
+                totalEmptySquaresCountLabel.Text = 90.ToString();
+                emptySquaresLeftCountLabel.Text = blank_cells_count.ToString();
+            }
+            else if (OptionsFileHandler.difficulty == "medium")
+            {
+                totalBombsCountLabel.Text = 40.ToString();
+                totalEmptySquaresCountLabel.Text = 216.ToString();
+                emptySquaresLeftCountLabel.Text = blank_cells_count.ToString();
+            }
+            else if (OptionsFileHandler.difficulty == "hard")
+            {
+                totalBombsCountLabel.Text = 99.ToString();
+                totalEmptySquaresCountLabel.Text = 381.ToString();
+                emptySquaresLeftCountLabel.Text = blank_cells_count.ToString();
+            }
+
         }
 
         private void nullifyMinesField()
@@ -95,16 +109,16 @@ namespace Minesweeper
             int cellSize = 0;
             if (OptionsFileHandler.difficulty == "easy")
             {
-                cellSize = 66;
+                cellSize = 82;//66
             }
             else if (OptionsFileHandler.difficulty == "medium")
             {
-                cellSize = 42;
+                cellSize = 51;//42
 
             }
             else if (OptionsFileHandler.difficulty == "hard")
             {
-                cellSize = 33;
+                cellSize = 42;//33
 
             }
 
@@ -129,7 +143,22 @@ namespace Minesweeper
             minesField.ScrollBars = ScrollBars.None;         //blocking unwanted midification from the user
             minesField.AllowUserToResizeRows = false;        //blocking unwanted midification from the user
             minesField.AllowUserToResizeColumns = false;     //blocking unwanted midification from the user
+            if (OptionsFileHandler.difficulty == "easy")
+            {
+            minesField.DefaultCellStyle.Font = new Font("Arial", 28);       //selecting the font
+
+            }
+            else if (OptionsFileHandler.difficulty == "medium")
+            {
+            minesField.DefaultCellStyle.Font = new Font("Arial", 18);       //selecting the font
+
+
+            }
+            else if (OptionsFileHandler.difficulty == "hard")
+            {
             minesField.DefaultCellStyle.Font = new Font("Arial", 12);       //selecting the font
+
+            }
             minesField.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;   //centering content of the squares
             minesField.Enabled = true;
         }
@@ -137,7 +166,7 @@ namespace Minesweeper
         
 
        
-        private void minesField_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        private void cellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left) // Check if right mouse button is pressed
             {
@@ -153,11 +182,7 @@ namespace Minesweeper
                     else
                     {
                         minesField[e.ColumnIndex, e.RowIndex].Value = matrix[e.RowIndex, e.ColumnIndex];
-                        blank_cells_count--;
-                        if(blank_cells_count == 0)
-                        {
-                            endGame();
-                        }
+                        progressEvaluation();
                     }
                     if (minesField[e.ColumnIndex, e.RowIndex].Style.BackColor == Color.LightSalmon)
                     {
@@ -165,6 +190,7 @@ namespace Minesweeper
                     }
                 }
             }
+
             if (e.Button == MouseButtons.Right) // Check if right mouse button is pressed
             {
                 if (minesField[e.ColumnIndex, e.RowIndex].Value == null)
@@ -185,15 +211,15 @@ namespace Minesweeper
         {
             if (OptionsFileHandler.difficulty == "easy")
             {
-                chosenFont = new Font("Wingdings", 30);
+                chosenFont = new Font("Wingdings", 36);
             }
             else if (OptionsFileHandler.difficulty == "medium")
             {
-                chosenFont = new Font("Wingdings", 20);
+                chosenFont = new Font("Wingdings", 22);
             }
             else if (OptionsFileHandler.difficulty == "hard")
             {
-                chosenFont = new Font("Wingdings", 10);
+                chosenFont = new Font("Wingdings", 18);
             }
         }
 
@@ -208,6 +234,46 @@ namespace Minesweeper
                 MessageBox.Show("You loose!", "Bad luck!", MessageBoxButtons.OK);
             }
             minesField.Enabled = false;
+
+            minesFieldShowcase();
+        }
+
+        private void progressEvaluation()
+        {
+            blank_cells_count--;
+            progressPoints++;
+            if(OptionsFileHandler.difficulty == "hard")
+            {
+                if (progressPoints == 4)
+                {
+                    gameProgressBar.Value += 1;
+                    progressPoints = 0;
+                }
+            }
+            if ((OptionsFileHandler.difficulty == "medium")&&(gameProgressBar.Value <= 100))
+            {
+                if (progressPoints == 2)
+                {
+                    gameProgressBar.Value += 1;
+                    progressPoints = 0;
+                }
+            }
+            if (OptionsFileHandler.difficulty == "easy")
+            {
+                gameProgressBar.Value += 1;
+            }
+
+            emptySquaresLeftCountLabel.Text = blank_cells_count.ToString();
+
+            if (blank_cells_count == 0)
+            {
+                gameProgressBar.Value = 100;
+                endGame();
+            }
+        }
+
+        private void minesFieldShowcase()
+        {
             for (int i = 0; i < minesField.Rows.Count; i++)
             {
                 for (int j = 0; j < minesField.Columns.Count; j++)
@@ -237,5 +303,26 @@ namespace Minesweeper
             }
         }
 
+        private void newGameBtn_Click(object sender, EventArgs e)
+        {
+            loadGame();
+        }
+
+        private void loadGame()
+        {
+            OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
+            implementDifficulty();
+            chooseCellSize();
+            chooseFont();
+            minesFieldFormatSettings();
+
+
+
+            MinesMatrix minesMatrix = new MinesMatrix();
+            matrix = minesMatrix.FetchMatrix(minesField.RowCount, minesField.ColumnCount, bombs_count);
+
+            nullifyMinesField();
+            prepareGameInfo();
+        }
     }
 }
