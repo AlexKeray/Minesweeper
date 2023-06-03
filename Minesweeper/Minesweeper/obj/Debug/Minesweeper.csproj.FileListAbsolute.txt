@@ -15,3 +15,14 @@ C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Scoreboard.resources
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CopyComplete
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.xml
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.xml
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\ScoreboardDB.db
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\Dapper.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\Dapper.xml

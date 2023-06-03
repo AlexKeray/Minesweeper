@@ -253,6 +253,7 @@ namespace Minesweeper
             minesField.Enabled = false;
 
             minesFieldShowcase();
+            ScoreboardDataManager.writeRecord(15, DateTime.Now.ToString("d-M-yyyy"));
         }
 
         private void progressEvaluation()
