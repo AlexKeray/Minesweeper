@@ -32,14 +32,15 @@
             this.optionsBtn = new System.Windows.Forms.Button();
             this.exitApplicationBtn = new System.Windows.Forms.Button();
             this.menuTitleLabel = new System.Windows.Forms.Label();
+            this.screboardBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startGameBtn
             // 
-            this.startGameBtn.Location = new System.Drawing.Point(525, 385);
-            this.startGameBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.startGameBtn.Location = new System.Drawing.Point(700, 474);
+            this.startGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startGameBtn.Name = "startGameBtn";
-            this.startGameBtn.Size = new System.Drawing.Size(346, 73);
+            this.startGameBtn.Size = new System.Drawing.Size(461, 90);
             this.startGameBtn.TabIndex = 0;
             this.startGameBtn.Text = "Start game";
             this.startGameBtn.UseVisualStyleBackColor = true;
@@ -47,10 +48,10 @@
             // 
             // optionsBtn
             // 
-            this.optionsBtn.Location = new System.Drawing.Point(525, 463);
-            this.optionsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.optionsBtn.Location = new System.Drawing.Point(700, 570);
+            this.optionsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionsBtn.Name = "optionsBtn";
-            this.optionsBtn.Size = new System.Drawing.Size(346, 73);
+            this.optionsBtn.Size = new System.Drawing.Size(461, 90);
             this.optionsBtn.TabIndex = 2;
             this.optionsBtn.Text = "Options";
             this.optionsBtn.UseVisualStyleBackColor = true;
@@ -58,10 +59,10 @@
             // 
             // exitApplicationBtn
             // 
-            this.exitApplicationBtn.Location = new System.Drawing.Point(525, 541);
-            this.exitApplicationBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitApplicationBtn.Location = new System.Drawing.Point(700, 666);
+            this.exitApplicationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitApplicationBtn.Name = "exitApplicationBtn";
-            this.exitApplicationBtn.Size = new System.Drawing.Size(346, 73);
+            this.exitApplicationBtn.Size = new System.Drawing.Size(461, 90);
             this.exitApplicationBtn.TabIndex = 3;
             this.exitApplicationBtn.Text = "Exit";
             this.exitApplicationBtn.UseVisualStyleBackColor = true;
@@ -70,23 +71,34 @@
             // menuTitleLabel
             // 
             this.menuTitleLabel.AutoSize = true;
-            this.menuTitleLabel.Location = new System.Drawing.Point(666, 225);
-            this.menuTitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.menuTitleLabel.Location = new System.Drawing.Point(888, 277);
             this.menuTitleLabel.Name = "menuTitleLabel";
-            this.menuTitleLabel.Size = new System.Drawing.Size(70, 13);
+            this.menuTitleLabel.Size = new System.Drawing.Size(88, 16);
             this.menuTitleLabel.TabIndex = 4;
             this.menuTitleLabel.Text = "Minesweeper";
             // 
+            // screboardBtn
+            // 
+            this.screboardBtn.Location = new System.Drawing.Point(700, 760);
+            this.screboardBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.screboardBtn.Name = "screboardBtn";
+            this.screboardBtn.Size = new System.Drawing.Size(461, 90);
+            this.screboardBtn.TabIndex = 5;
+            this.screboardBtn.Text = "Scoreboard";
+            this.screboardBtn.UseVisualStyleBackColor = true;
+            this.screboardBtn.Click += new System.EventHandler(this.go_to_scoreboard);
+            // 
             // Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
+            this.ClientSize = new System.Drawing.Size(1901, 1033);
+            this.Controls.Add(this.screboardBtn);
             this.Controls.Add(this.menuTitleLabel);
             this.Controls.Add(this.exitApplicationBtn);
             this.Controls.Add(this.optionsBtn);
             this.Controls.Add(this.startGameBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -101,6 +113,7 @@
         private System.Windows.Forms.Button optionsBtn;
         private System.Windows.Forms.Button exitApplicationBtn;
         private System.Windows.Forms.Label menuTitleLabel;
+        private System.Windows.Forms.Button screboardBtn;
     }
 }
 

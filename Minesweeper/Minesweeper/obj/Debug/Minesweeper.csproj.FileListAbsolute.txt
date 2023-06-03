@@ -11,3 +11,7 @@ C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.GameScreen.resources
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.OptionsMenu.resources
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Scoreboard.resources
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CopyComplete

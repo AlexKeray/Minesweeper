@@ -42,5 +42,13 @@ namespace Minesweeper
         {
             Application.Exit();
         }
+
+        private void go_to_scoreboard(object sender, EventArgs e)
+        {
+            Scoreboard scoreboard = new Scoreboard();
+            this.Hide();
+            scoreboard.ShowDialog();
+            this.Show();
+        }
     }
 }
