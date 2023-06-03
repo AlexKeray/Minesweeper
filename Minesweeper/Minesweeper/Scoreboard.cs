@@ -17,7 +17,7 @@ namespace Minesweeper
             InitializeComponent();
         }
 
-        private void scoreboardToMenuBtn_Click(object sender, EventArgs e)
+        private void return_to_menu_from_scoreboard(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -27,7 +27,6 @@ namespace Minesweeper
             ScoreboardDataManager.createDataTable();
             ScoreboardDataManager.readRecords();
             scoreboardTable.DataSource = ScoreboardDataManager.dataTable;
-
         }
     }
 }

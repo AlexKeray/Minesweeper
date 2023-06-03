@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
-using System.Data.SQLite;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Minesweeper
 {
     internal class ScoreboardDataManager
     {
-
-        //private static string connectionString = "Data Source=ScoreboardSQLite.db;";
         private static string connectionString = "Data Source=ScoreboardDB.db;";
 
         public static DataTable dataTable;
@@ -32,7 +28,7 @@ namespace Minesweeper
             string selectQuery = "SELECT * FROM ScoreboardTable";
             SQLiteCommand command = new SQLiteCommand(selectQuery, connection);
             connection.Open();
-            SQLiteDataReader reader = command.ExecuteReader();     
+            SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
                 int id = reader.GetInt32(0);

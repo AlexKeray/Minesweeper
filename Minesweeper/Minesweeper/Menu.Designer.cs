@@ -32,12 +32,12 @@
             this.optionsBtn = new System.Windows.Forms.Button();
             this.exitApplicationBtn = new System.Windows.Forms.Button();
             this.menuTitleLabel = new System.Windows.Forms.Label();
-            this.screboardBtn = new System.Windows.Forms.Button();
+            this.scoreboardBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // startGameBtn
             // 
-            this.startGameBtn.Location = new System.Drawing.Point(700, 474);
+            this.startGameBtn.Location = new System.Drawing.Point(704, 142);
             this.startGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startGameBtn.Name = "startGameBtn";
             this.startGameBtn.Size = new System.Drawing.Size(461, 90);
@@ -48,7 +48,7 @@
             // 
             // optionsBtn
             // 
-            this.optionsBtn.Location = new System.Drawing.Point(700, 570);
+            this.optionsBtn.Location = new System.Drawing.Point(704, 236);
             this.optionsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionsBtn.Name = "optionsBtn";
             this.optionsBtn.Size = new System.Drawing.Size(461, 90);
@@ -59,7 +59,7 @@
             // 
             // exitApplicationBtn
             // 
-            this.exitApplicationBtn.Location = new System.Drawing.Point(700, 666);
+            this.exitApplicationBtn.Location = new System.Drawing.Point(704, 424);
             this.exitApplicationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitApplicationBtn.Name = "exitApplicationBtn";
             this.exitApplicationBtn.Size = new System.Drawing.Size(461, 90);
@@ -71,29 +71,29 @@
             // menuTitleLabel
             // 
             this.menuTitleLabel.AutoSize = true;
-            this.menuTitleLabel.Location = new System.Drawing.Point(888, 277);
+            this.menuTitleLabel.Location = new System.Drawing.Point(891, 93);
             this.menuTitleLabel.Name = "menuTitleLabel";
             this.menuTitleLabel.Size = new System.Drawing.Size(88, 16);
             this.menuTitleLabel.TabIndex = 4;
             this.menuTitleLabel.Text = "Minesweeper";
             // 
-            // screboardBtn
+            // scoreboardBtn
             // 
-            this.screboardBtn.Location = new System.Drawing.Point(700, 760);
-            this.screboardBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.screboardBtn.Name = "screboardBtn";
-            this.screboardBtn.Size = new System.Drawing.Size(461, 90);
-            this.screboardBtn.TabIndex = 5;
-            this.screboardBtn.Text = "Scoreboard";
-            this.screboardBtn.UseVisualStyleBackColor = true;
-            this.screboardBtn.Click += new System.EventHandler(this.go_to_scoreboard);
+            this.scoreboardBtn.Location = new System.Drawing.Point(704, 330);
+            this.scoreboardBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scoreboardBtn.Name = "scoreboardBtn";
+            this.scoreboardBtn.Size = new System.Drawing.Size(461, 90);
+            this.scoreboardBtn.TabIndex = 5;
+            this.scoreboardBtn.Text = "Scoreboard";
+            this.scoreboardBtn.UseVisualStyleBackColor = true;
+            this.scoreboardBtn.Click += new System.EventHandler(this.go_to_scoreboard);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1901, 1033);
-            this.Controls.Add(this.screboardBtn);
+            this.Controls.Add(this.scoreboardBtn);
             this.Controls.Add(this.menuTitleLabel);
             this.Controls.Add(this.exitApplicationBtn);
             this.Controls.Add(this.optionsBtn);
@@ -113,7 +113,7 @@
         private System.Windows.Forms.Button optionsBtn;
         private System.Windows.Forms.Button exitApplicationBtn;
         private System.Windows.Forms.Label menuTitleLabel;
-        private System.Windows.Forms.Button screboardBtn;
+        private System.Windows.Forms.Button scoreboardBtn;
     }
 }
 
