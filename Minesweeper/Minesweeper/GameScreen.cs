@@ -17,6 +17,7 @@ namespace Minesweeper
         int bombs_count = 0;
         int blank_cells_count = 0;
         int progressPoints = 0;
+        int score = 0;
         public static int[,] matrix;
         Font chosenFont;
 
@@ -253,15 +254,17 @@ namespace Minesweeper
             minesField.Enabled = false;
 
             minesFieldShowcase();
-            ScoreboardDataManager.writeRecord(15, DateTime.Now.ToString("d-M-yyyy"));
+            ScoreboardDataManager.writeRecord(score, DateTime.Now.ToString("d-M-yyyy"));
         }
 
         private void progressEvaluation()
         {
             blank_cells_count--;
+            score += 10;
             progressPoints++;
             if(OptionsFileHandler.difficulty == "hard")
             {
+
                 if (progressPoints == 4)
                 {
                     gameProgressBar.Value += 1;
@@ -282,6 +285,7 @@ namespace Minesweeper
             }
 
             emptySquaresLeftCountLabel.Text = blank_cells_count.ToString();
+            scoreTextCountLabel.Text = score.ToString();
 
             if (blank_cells_count == 0)
             {
@@ -323,6 +327,8 @@ namespace Minesweeper
 
         private void newGameBtn_Click(object sender, EventArgs e)
         {
+            score = 0;
+            scoreTextCountLabel.Text = score.ToString();
             loadGame();
         }
 

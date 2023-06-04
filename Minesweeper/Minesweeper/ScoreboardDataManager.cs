@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace Minesweeper
 {
@@ -14,7 +15,7 @@ namespace Minesweeper
 
         public static DataTable dataTable;
 
-        public static void createDataTable()
+        public static void createDataTables()
         {
             dataTable = new DataTable();
             dataTable.Columns.Add("Place", typeof(int));
@@ -25,16 +26,17 @@ namespace Minesweeper
         public static void readRecords()
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
-            string selectQuery = "SELECT * FROM ScoreboardTable";
+            string selectQuery = "SELECT Score, Username, Date FROM ScoreboardTable ORDER BY Score DESC LIMIT 10";
             SQLiteCommand command = new SQLiteCommand(selectQuery, connection);
             connection.Open();
             SQLiteDataReader reader = command.ExecuteReader();
+            int id = 0;
             while (reader.Read())
             {
-                int id = reader.GetInt32(0);
-                int retrievedScore = reader.GetInt32(1);
-                string retrievedUsername = reader.GetString(2);
-                string retrievedDate = reader.GetString(3);
+                id ++;
+                int retrievedScore = reader.GetInt32(0);
+                string retrievedUsername = reader.GetString(1);
+                string retrievedDate = reader.GetString(2);
 
                 DataRow dataRow = dataTable.NewRow();
                 dataRow["Place"] = id;
@@ -43,6 +45,7 @@ namespace Minesweeper
                 dataRow["Date"] = retrievedDate;
                 dataTable.Rows.Add(dataRow);
             }
+            
             reader.Close();
             connection.Close();
         }

@@ -24,9 +24,23 @@ namespace Minesweeper
 
         private void Scoreboard_Load(object sender, EventArgs e)
         {
-            ScoreboardDataManager.createDataTable();
+            ScoreboardDataManager.createDataTables();
             ScoreboardDataManager.readRecords();
             scoreboardTable.DataSource = ScoreboardDataManager.dataTable;
+            scoreboardFormat();
+        }
+
+        private void scoreboardFormat()
+        {
+            scoreboardTable.ColumnHeadersVisible = true;         //removing the extra stuff
+            scoreboardTable.RowHeadersVisible = false;            //removing the extra stuff
+            scoreboardTable.ReadOnly = true;                      //blocking unwanted midification from the user
+            scoreboardTable.ScrollBars = ScrollBars.None;         //blocking unwanted midification from the user
+            scoreboardTable.AllowUserToResizeRows = false;        //blocking unwanted midification from the user
+            scoreboardTable.AllowUserToResizeColumns = false;     //blocking unwanted midification from the user
+            scoreboardTable.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;   //centering content of the squares
+            scoreboardTable.Enabled = true;
+            scoreboardTable.AllowUserToAddRows = false;
         }
     }
 }
