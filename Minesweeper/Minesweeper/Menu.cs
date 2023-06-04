@@ -19,7 +19,13 @@ namespace Minesweeper
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            chooseMenuSize();
+        }
 
+        private void chooseMenuSize()
+        {
+            this.Size = new Size(724, 592);
         }
 
         private void start_game(object sender, EventArgs e)

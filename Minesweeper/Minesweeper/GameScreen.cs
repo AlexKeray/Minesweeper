@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 
 namespace Minesweeper
 {
@@ -34,9 +35,9 @@ namespace Minesweeper
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
+            chooseGameScreenSize();
             loadGame();
-
-
         }
 
         private void prepareGameInfo()
@@ -122,21 +123,39 @@ namespace Minesweeper
             minesField.ColumnCount = colcount;      //setting the field
             minesField.RowCount = rowcount;         //setting the field
         }
+
+        private void chooseGameScreenSize()
+        {
+            if (OptionsFileHandler.difficulty == "easy")
+            {
+                this.Size = new Size(724, 592);
+            }
+            else if (OptionsFileHandler.difficulty == "medium")
+            {
+                this.Size = new Size(724, 592);
+
+            }
+            else if (OptionsFileHandler.difficulty == "hard")
+            {
+                this.Size = new Size(1172, 592);
+
+            }
+        }
         private void chooseCellSize()
         {
             int cellSize = 0;
             if (OptionsFileHandler.difficulty == "easy")
             {
-                cellSize = 82;//66
+                cellSize = 51;
             }
             else if (OptionsFileHandler.difficulty == "medium")
             {
-                cellSize = 51;//42
+                cellSize = 32;
 
             }
             else if (OptionsFileHandler.difficulty == "hard")
             {
-                cellSize = 42;//33
+                cellSize = 32;
 
             }
 

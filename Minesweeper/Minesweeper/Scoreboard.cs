@@ -24,12 +24,18 @@ namespace Minesweeper
 
         private void Scoreboard_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             ScoreboardDataManager.createDataTables();
             ScoreboardDataManager.readRecords();
             scoreboardTable.DataSource = ScoreboardDataManager.dataTable;
             scoreboardFormat();
+            chooseScoreboardSize();
         }
 
+        private void chooseScoreboardSize()
+        {
+            this.Size = new Size(724, 592);
+        }
         private void scoreboardFormat()
         {
             scoreboardTable.ColumnHeadersVisible = true;         //removing the extra stuff

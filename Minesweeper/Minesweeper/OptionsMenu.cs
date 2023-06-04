@@ -19,11 +19,18 @@ namespace Minesweeper
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
 
             usernameTextbox.Text = OptionsFileHandler.username;
 
             load_difficulty_radiobuttons();
+            chooseOptionsMenuSize();
+        }
+
+        private void chooseOptionsMenuSize()
+        {
+            this.Size = new Size(724, 592);
         }
 
         private void return_to_menu_from_options(object sender, EventArgs e)
