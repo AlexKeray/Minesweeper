@@ -102,6 +102,7 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
+            this.LocationChanged += new System.EventHandler(this.Menu_LocationChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

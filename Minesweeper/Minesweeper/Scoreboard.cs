@@ -24,7 +24,7 @@ namespace Minesweeper
 
         private void Scoreboard_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
+            //this.StartPosition = FormStartPosition.CenterScreen;
             ScoreboardDataManager.createDataTables();
             ScoreboardDataManager.readRecords();
             scoreboardTable.DataSource = ScoreboardDataManager.dataTable;

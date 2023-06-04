@@ -35,7 +35,7 @@ namespace Minesweeper
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
+            //this.StartPosition = FormStartPosition.CenterScreen;
             chooseGameScreenSize();
             loadGame();
         }
