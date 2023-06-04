@@ -35,9 +35,10 @@
             // 
             // scoreboardToMenuBtn
             // 
-            this.scoreboardToMenuBtn.Location = new System.Drawing.Point(13, 13);
+            this.scoreboardToMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreboardToMenuBtn.Location = new System.Drawing.Point(13, 580);
             this.scoreboardToMenuBtn.Name = "scoreboardToMenuBtn";
-            this.scoreboardToMenuBtn.Size = new System.Drawing.Size(75, 23);
+            this.scoreboardToMenuBtn.Size = new System.Drawing.Size(196, 89);
             this.scoreboardToMenuBtn.TabIndex = 0;
             this.scoreboardToMenuBtn.Text = "menu";
             this.scoreboardToMenuBtn.UseVisualStyleBackColor = true;
@@ -46,18 +47,18 @@
             // scoreboardTable
             // 
             this.scoreboardTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scoreboardTable.Location = new System.Drawing.Point(13, 52);
+            this.scoreboardTable.Location = new System.Drawing.Point(13, 12);
             this.scoreboardTable.Name = "scoreboardTable";
             this.scoreboardTable.RowHeadersWidth = 51;
             this.scoreboardTable.RowTemplate.Height = 24;
-            this.scoreboardTable.Size = new System.Drawing.Size(593, 362);
+            this.scoreboardTable.Size = new System.Drawing.Size(917, 551);
             this.scoreboardTable.TabIndex = 1;
             // 
             // Scoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(941, 637);
             this.Controls.Add(this.scoreboardTable);
             this.Controls.Add(this.scoreboardToMenuBtn);
             this.Name = "Scoreboard";

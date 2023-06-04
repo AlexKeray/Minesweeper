@@ -37,7 +37,8 @@
             // 
             // startGameBtn
             // 
-            this.startGameBtn.Location = new System.Drawing.Point(237, 169);
+            this.startGameBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startGameBtn.Location = new System.Drawing.Point(237, 190);
             this.startGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startGameBtn.Name = "startGameBtn";
             this.startGameBtn.Size = new System.Drawing.Size(461, 90);
@@ -48,7 +49,8 @@
             // 
             // optionsBtn
             // 
-            this.optionsBtn.Location = new System.Drawing.Point(237, 263);
+            this.optionsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optionsBtn.Location = new System.Drawing.Point(237, 284);
             this.optionsBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.optionsBtn.Name = "optionsBtn";
             this.optionsBtn.Size = new System.Drawing.Size(461, 90);
@@ -59,7 +61,8 @@
             // 
             // exitApplicationBtn
             // 
-            this.exitApplicationBtn.Location = new System.Drawing.Point(237, 451);
+            this.exitApplicationBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitApplicationBtn.Location = new System.Drawing.Point(237, 472);
             this.exitApplicationBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitApplicationBtn.Name = "exitApplicationBtn";
             this.exitApplicationBtn.Size = new System.Drawing.Size(461, 90);
@@ -71,15 +74,17 @@
             // menuTitleLabel
             // 
             this.menuTitleLabel.AutoSize = true;
-            this.menuTitleLabel.Location = new System.Drawing.Point(424, 120);
+            this.menuTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuTitleLabel.Location = new System.Drawing.Point(280, 80);
             this.menuTitleLabel.Name = "menuTitleLabel";
-            this.menuTitleLabel.Size = new System.Drawing.Size(88, 16);
+            this.menuTitleLabel.Size = new System.Drawing.Size(385, 69);
             this.menuTitleLabel.TabIndex = 4;
             this.menuTitleLabel.Text = "Minesweeper";
             // 
             // scoreboardBtn
             // 
-            this.scoreboardBtn.Location = new System.Drawing.Point(237, 357);
+            this.scoreboardBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreboardBtn.Location = new System.Drawing.Point(237, 378);
             this.scoreboardBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.scoreboardBtn.Name = "scoreboardBtn";
             this.scoreboardBtn.Size = new System.Drawing.Size(461, 90);

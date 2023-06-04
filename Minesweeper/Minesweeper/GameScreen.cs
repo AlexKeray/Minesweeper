@@ -35,7 +35,8 @@ namespace Minesweeper
 
         private void GameScreen_Load(object sender, EventArgs e)
         {
-            //this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.BackColor = ColorTranslator.FromHtml("#d9d9d9");
             chooseGameScreenSize();
             loadGame();
         }
@@ -72,25 +73,10 @@ namespace Minesweeper
                 for (int j = 0; j < minesField.ColumnCount; j++)
                 {
                     minesField.Rows[i].Cells[j].Value = null;
-                    if (OptionsFileHandler.difficulty == "easy")
-                    {
-                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 28);       //selecting the font
-
-                    }
-                    else if (OptionsFileHandler.difficulty == "medium")
-                    {
-                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 18);       //selecting the font
-
-
-                    }
-                    else if (OptionsFileHandler.difficulty == "hard")
-                    {
-                        minesField.Rows[i].Cells[j].Style.Font = new Font("Arial", 12);       //selecting the font
-
-                    }
                     minesField.Rows[i].Cells[j].Style.BackColor = Color.White;
                 }
             }
+            minesFieldFormatSettings();
         }
 
 
@@ -182,12 +168,12 @@ namespace Minesweeper
             minesField.AllowUserToResizeColumns = false;     //blocking unwanted midification from the user
             if (OptionsFileHandler.difficulty == "easy")
             {
-            minesField.DefaultCellStyle.Font = new Font("Arial", 28);       //selecting the font
+            minesField.DefaultCellStyle.Font = new Font("Arial", 18);       //selecting the font
 
             }
             else if (OptionsFileHandler.difficulty == "medium")
             {
-            minesField.DefaultCellStyle.Font = new Font("Arial", 18);       //selecting the font
+            minesField.DefaultCellStyle.Font = new Font("Arial", 12);       //selecting the font
 
 
             }
@@ -248,15 +234,15 @@ namespace Minesweeper
         {
             if (OptionsFileHandler.difficulty == "easy")
             {
-                chosenFont = new Font("Wingdings", 36);
+                chosenFont = new Font("Wingdings", 22);
             }
             else if (OptionsFileHandler.difficulty == "medium")
             {
-                chosenFont = new Font("Wingdings", 22);
+                chosenFont = new Font("Wingdings", 14);
             }
             else if (OptionsFileHandler.difficulty == "hard")
             {
-                chosenFont = new Font("Wingdings", 18);
+                chosenFont = new Font("Wingdings", 14);
             }
         }
 
@@ -273,7 +259,7 @@ namespace Minesweeper
             minesField.Enabled = false;
 
             minesFieldShowcase();
-            ScoreboardDataManager.writeRecord(score, DateTime.Now.ToString("d-M-yyyy"));
+            ScoreboardDataManager.writeRecord(score, DateTime.Now.ToString("HH:mm   d-M-yyyy"));
         }
 
         private void progressEvaluation()
@@ -366,6 +352,16 @@ namespace Minesweeper
 
             nullifyMinesField();
             prepareGameInfo();
+        }
+
+        private void totalEmptySquaresCountLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalBombsCountLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

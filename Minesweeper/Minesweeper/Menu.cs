@@ -21,6 +21,8 @@ namespace Minesweeper
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            this.MaximizeBox = false;
+            this.BackColor = ColorTranslator.FromHtml("#d9d9d9");
             this.StartPosition = FormStartPosition.CenterScreen;
             initialPosition = this.Location;
             chooseMenuSize();

@@ -45,7 +45,8 @@
             // 
             // gameScreenToMenuBtn
             // 
-            this.gameScreenToMenuBtn.Location = new System.Drawing.Point(12, 12);
+            this.gameScreenToMenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameScreenToMenuBtn.Location = new System.Drawing.Point(12, 584);
             this.gameScreenToMenuBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gameScreenToMenuBtn.Name = "gameScreenToMenuBtn";
             this.gameScreenToMenuBtn.Size = new System.Drawing.Size(196, 89);
@@ -68,7 +69,8 @@
             // 
             // newGameBtn
             // 
-            this.newGameBtn.Location = new System.Drawing.Point(12, 106);
+            this.newGameBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newGameBtn.Location = new System.Drawing.Point(13, 491);
             this.newGameBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newGameBtn.Name = "newGameBtn";
             this.newGameBtn.Size = new System.Drawing.Size(196, 89);
@@ -80,87 +82,97 @@
             // totalBombsTextLabel
             // 
             this.totalBombsTextLabel.AutoSize = true;
-            this.totalBombsTextLabel.Location = new System.Drawing.Point(16, 213);
+            this.totalBombsTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBombsTextLabel.Location = new System.Drawing.Point(13, 31);
             this.totalBombsTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalBombsTextLabel.Name = "totalBombsTextLabel";
-            this.totalBombsTextLabel.Size = new System.Drawing.Size(121, 16);
+            this.totalBombsTextLabel.Size = new System.Drawing.Size(136, 18);
             this.totalBombsTextLabel.TabIndex = 3;
             this.totalBombsTextLabel.Text = "Total bombs count:";
             // 
             // totalBombsCountLabel
             // 
             this.totalBombsCountLabel.AutoSize = true;
-            this.totalBombsCountLabel.Location = new System.Drawing.Point(161, 213);
+            this.totalBombsCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalBombsCountLabel.Location = new System.Drawing.Point(181, 31);
             this.totalBombsCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalBombsCountLabel.Name = "totalBombsCountLabel";
-            this.totalBombsCountLabel.Size = new System.Drawing.Size(13, 16);
+            this.totalBombsCountLabel.Size = new System.Drawing.Size(17, 20);
             this.totalBombsCountLabel.TabIndex = 4;
             this.totalBombsCountLabel.Text = "..";
+            this.totalBombsCountLabel.Click += new System.EventHandler(this.totalBombsCountLabel_Click);
             // 
             // totalEmptySquaresTextLabel
             // 
             this.totalEmptySquaresTextLabel.AutoSize = true;
-            this.totalEmptySquaresTextLabel.Location = new System.Drawing.Point(16, 247);
+            this.totalEmptySquaresTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalEmptySquaresTextLabel.Location = new System.Drawing.Point(13, 64);
             this.totalEmptySquaresTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalEmptySquaresTextLabel.Name = "totalEmptySquaresTextLabel";
-            this.totalEmptySquaresTextLabel.Size = new System.Drawing.Size(133, 16);
+            this.totalEmptySquaresTextLabel.Size = new System.Drawing.Size(146, 18);
             this.totalEmptySquaresTextLabel.TabIndex = 5;
             this.totalEmptySquaresTextLabel.Text = "Total empty squares:";
             // 
             // totalEmptySquaresCountLabel
             // 
             this.totalEmptySquaresCountLabel.AutoSize = true;
-            this.totalEmptySquaresCountLabel.Location = new System.Drawing.Point(161, 247);
+            this.totalEmptySquaresCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalEmptySquaresCountLabel.Location = new System.Drawing.Point(181, 63);
             this.totalEmptySquaresCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.totalEmptySquaresCountLabel.Name = "totalEmptySquaresCountLabel";
-            this.totalEmptySquaresCountLabel.Size = new System.Drawing.Size(13, 16);
+            this.totalEmptySquaresCountLabel.Size = new System.Drawing.Size(17, 20);
             this.totalEmptySquaresCountLabel.TabIndex = 6;
             this.totalEmptySquaresCountLabel.Text = "..";
+            this.totalEmptySquaresCountLabel.Click += new System.EventHandler(this.totalEmptySquaresCountLabel_Click);
             // 
             // emptySquaresLeftTextLabel
             // 
             this.emptySquaresLeftTextLabel.AutoSize = true;
-            this.emptySquaresLeftTextLabel.Location = new System.Drawing.Point(16, 282);
+            this.emptySquaresLeftTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptySquaresLeftTextLabel.Location = new System.Drawing.Point(13, 96);
             this.emptySquaresLeftTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emptySquaresLeftTextLabel.Name = "emptySquaresLeftTextLabel";
-            this.emptySquaresLeftTextLabel.Size = new System.Drawing.Size(120, 16);
+            this.emptySquaresLeftTextLabel.Size = new System.Drawing.Size(134, 18);
             this.emptySquaresLeftTextLabel.TabIndex = 8;
             this.emptySquaresLeftTextLabel.Text = "Empty squares left:";
             // 
             // emptySquaresLeftCountLabel
             // 
             this.emptySquaresLeftCountLabel.AutoSize = true;
-            this.emptySquaresLeftCountLabel.Location = new System.Drawing.Point(161, 282);
+            this.emptySquaresLeftCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptySquaresLeftCountLabel.Location = new System.Drawing.Point(181, 95);
             this.emptySquaresLeftCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emptySquaresLeftCountLabel.Name = "emptySquaresLeftCountLabel";
-            this.emptySquaresLeftCountLabel.Size = new System.Drawing.Size(13, 16);
+            this.emptySquaresLeftCountLabel.Size = new System.Drawing.Size(17, 20);
             this.emptySquaresLeftCountLabel.TabIndex = 7;
             this.emptySquaresLeftCountLabel.Text = "..";
             // 
             // scoreTextLabel
             // 
             this.scoreTextLabel.AutoSize = true;
-            this.scoreTextLabel.Location = new System.Drawing.Point(88, 345);
+            this.scoreTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreTextLabel.Location = new System.Drawing.Point(27, 184);
             this.scoreTextLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scoreTextLabel.Name = "scoreTextLabel";
-            this.scoreTextLabel.Size = new System.Drawing.Size(46, 16);
+            this.scoreTextLabel.Size = new System.Drawing.Size(96, 32);
             this.scoreTextLabel.TabIndex = 9;
             this.scoreTextLabel.Text = "Score:";
             // 
             // scoreTextCountLabel
             // 
             this.scoreTextCountLabel.AutoSize = true;
-            this.scoreTextCountLabel.Location = new System.Drawing.Point(88, 373);
+            this.scoreTextCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreTextCountLabel.Location = new System.Drawing.Point(128, 179);
             this.scoreTextCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scoreTextCountLabel.Name = "scoreTextCountLabel";
-            this.scoreTextCountLabel.Size = new System.Drawing.Size(13, 16);
+            this.scoreTextCountLabel.Size = new System.Drawing.Size(35, 39);
             this.scoreTextCountLabel.TabIndex = 10;
             this.scoreTextCountLabel.Text = "..";
             // 
             // gameProgressBar
             // 
-            this.gameProgressBar.Location = new System.Drawing.Point(13, 313);
-            this.gameProgressBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gameProgressBar.Location = new System.Drawing.Point(19, 131);
+            this.gameProgressBar.Margin = new System.Windows.Forms.Padding(4);
             this.gameProgressBar.Name = "gameProgressBar";
             this.gameProgressBar.Size = new System.Drawing.Size(195, 28);
             this.gameProgressBar.TabIndex = 11;

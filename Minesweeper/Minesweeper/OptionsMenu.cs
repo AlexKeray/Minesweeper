@@ -19,7 +19,8 @@ namespace Minesweeper
 
         private void OptionsMenu_Load(object sender, EventArgs e)
         {
-            //this.StartPosition = FormStartPosition.CenterScreen;
+            this.MaximizeBox = false;
+            this.BackColor = ColorTranslator.FromHtml("#d9d9d9");
             OptionsFileHandler.ReadTextFile(@"OptionsFile.txt");
 
             usernameTextbox.Text = OptionsFileHandler.username;
