@@ -1,6 +1,6 @@
 ﻿namespace Minesweeper
 {
-    partial class OptionsMenu
+    partial class Options
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.optionsToMenuBtn = new System.Windows.Forms.Button();
-            this.difficultyEasy = new System.Windows.Forms.RadioButton();
-            this.difficultyMedium = new System.Windows.Forms.RadioButton();
-            this.difficultyHard = new System.Windows.Forms.RadioButton();
+            this.difficultyEasyRadioButton = new System.Windows.Forms.RadioButton();
+            this.difficultyMediumRadioButton = new System.Windows.Forms.RadioButton();
+            this.difficultyHardRadioButton = new System.Windows.Forms.RadioButton();
             this.difficultyLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextbox = new System.Windows.Forms.TextBox();
@@ -47,52 +47,52 @@
             this.optionsToMenuBtn.TabIndex = 0;
             this.optionsToMenuBtn.Text = "Menu";
             this.optionsToMenuBtn.UseVisualStyleBackColor = true;
-            this.optionsToMenuBtn.Click += new System.EventHandler(this.return_to_menu_from_options);
+            this.optionsToMenuBtn.Click += new System.EventHandler(this.close_Options);
             // 
-            // difficultyEasy
+            // difficultyEasyRadioButton
             // 
-            this.difficultyEasy.AutoCheck = false;
-            this.difficultyEasy.AutoSize = true;
-            this.difficultyEasy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difficultyEasy.Location = new System.Drawing.Point(439, 222);
-            this.difficultyEasy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.difficultyEasy.Name = "difficultyEasy";
-            this.difficultyEasy.Size = new System.Drawing.Size(77, 29);
-            this.difficultyEasy.TabIndex = 1;
-            this.difficultyEasy.TabStop = true;
-            this.difficultyEasy.Text = "Easy";
-            this.difficultyEasy.UseVisualStyleBackColor = true;
-            this.difficultyEasy.Click += new System.EventHandler(this.click_difficultyEasy_radioBtn);
+            this.difficultyEasyRadioButton.AutoCheck = false;
+            this.difficultyEasyRadioButton.AutoSize = true;
+            this.difficultyEasyRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difficultyEasyRadioButton.Location = new System.Drawing.Point(439, 222);
+            this.difficultyEasyRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.difficultyEasyRadioButton.Name = "difficultyEasyRadioButton";
+            this.difficultyEasyRadioButton.Size = new System.Drawing.Size(77, 29);
+            this.difficultyEasyRadioButton.TabIndex = 1;
+            this.difficultyEasyRadioButton.TabStop = true;
+            this.difficultyEasyRadioButton.Text = "Easy";
+            this.difficultyEasyRadioButton.UseVisualStyleBackColor = true;
+            this.difficultyEasyRadioButton.Click += new System.EventHandler(this.click_difficultyEasyRadioButton);
             // 
-            // difficultyMedium
+            // difficultyMediumRadioButton
             // 
-            this.difficultyMedium.AutoCheck = false;
-            this.difficultyMedium.AutoSize = true;
-            this.difficultyMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difficultyMedium.Location = new System.Drawing.Point(439, 270);
-            this.difficultyMedium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.difficultyMedium.Name = "difficultyMedium";
-            this.difficultyMedium.Size = new System.Drawing.Size(103, 29);
-            this.difficultyMedium.TabIndex = 2;
-            this.difficultyMedium.TabStop = true;
-            this.difficultyMedium.Text = "Medium";
-            this.difficultyMedium.UseVisualStyleBackColor = true;
-            this.difficultyMedium.Click += new System.EventHandler(this.click_difficultyMedium_radioBtn);
+            this.difficultyMediumRadioButton.AutoCheck = false;
+            this.difficultyMediumRadioButton.AutoSize = true;
+            this.difficultyMediumRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difficultyMediumRadioButton.Location = new System.Drawing.Point(439, 270);
+            this.difficultyMediumRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.difficultyMediumRadioButton.Name = "difficultyMediumRadioButton";
+            this.difficultyMediumRadioButton.Size = new System.Drawing.Size(103, 29);
+            this.difficultyMediumRadioButton.TabIndex = 2;
+            this.difficultyMediumRadioButton.TabStop = true;
+            this.difficultyMediumRadioButton.Text = "Medium";
+            this.difficultyMediumRadioButton.UseVisualStyleBackColor = true;
+            this.difficultyMediumRadioButton.Click += new System.EventHandler(this.click_difficultyMediumRadioButton);
             // 
-            // difficultyHard
+            // difficultyHardRadioButton
             // 
-            this.difficultyHard.AutoCheck = false;
-            this.difficultyHard.AutoSize = true;
-            this.difficultyHard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.difficultyHard.Location = new System.Drawing.Point(439, 321);
-            this.difficultyHard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.difficultyHard.Name = "difficultyHard";
-            this.difficultyHard.Size = new System.Drawing.Size(75, 29);
-            this.difficultyHard.TabIndex = 3;
-            this.difficultyHard.TabStop = true;
-            this.difficultyHard.Text = "Hard";
-            this.difficultyHard.UseVisualStyleBackColor = true;
-            this.difficultyHard.Click += new System.EventHandler(this.click_difficultyHard_radioBtn);
+            this.difficultyHardRadioButton.AutoCheck = false;
+            this.difficultyHardRadioButton.AutoSize = true;
+            this.difficultyHardRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.difficultyHardRadioButton.Location = new System.Drawing.Point(439, 321);
+            this.difficultyHardRadioButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.difficultyHardRadioButton.Name = "difficultyHardRadioButton";
+            this.difficultyHardRadioButton.Size = new System.Drawing.Size(75, 29);
+            this.difficultyHardRadioButton.TabIndex = 3;
+            this.difficultyHardRadioButton.TabStop = true;
+            this.difficultyHardRadioButton.Text = "Hard";
+            this.difficultyHardRadioButton.UseVisualStyleBackColor = true;
+            this.difficultyHardRadioButton.Click += new System.EventHandler(this.click_difficultyHardRadioButton);
             // 
             // difficultyLabel
             // 
@@ -122,9 +122,8 @@
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(218, 38);
             this.usernameTextbox.TabIndex = 6;
-            this.usernameTextbox.TextChanged += new System.EventHandler(this.change_username);
             // 
-            // OptionsMenu
+            // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,14 +131,14 @@
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.difficultyLabel);
-            this.Controls.Add(this.difficultyHard);
-            this.Controls.Add(this.difficultyMedium);
-            this.Controls.Add(this.difficultyEasy);
+            this.Controls.Add(this.difficultyHardRadioButton);
+            this.Controls.Add(this.difficultyMediumRadioButton);
+            this.Controls.Add(this.difficultyEasyRadioButton);
             this.Controls.Add(this.optionsToMenuBtn);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "OptionsMenu";
+            this.Name = "Options";
             this.Text = "Options";
-            this.Load += new System.EventHandler(this.OptionsMenu_Load);
+            this.Load += new System.EventHandler(this.load_options);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,9 +147,9 @@
         #endregion
 
         private System.Windows.Forms.Button optionsToMenuBtn;
-        private System.Windows.Forms.RadioButton difficultyEasy;
-        private System.Windows.Forms.RadioButton difficultyMedium;
-        private System.Windows.Forms.RadioButton difficultyHard;
+        private System.Windows.Forms.RadioButton difficultyEasyRadioButton;
+        private System.Windows.Forms.RadioButton difficultyMediumRadioButton;
+        private System.Windows.Forms.RadioButton difficultyHardRadioButton;
         private System.Windows.Forms.Label difficultyLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextbox;

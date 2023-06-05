@@ -9,13 +9,13 @@ using System.Security.Cryptography;
 
 namespace Minesweeper
 {
-    internal class ScoreboardDataManager
+    internal class ScoreboardDataBaseManager
     {
-        private static string connectionString = "Data Source=ScoreboardDB.db;";
+        private static string connectionString = "Data Source=ScoreboardDB.db;"; // link to the database file
 
         public static DataTable dataTable;
 
-        public static void createDataTables()
+        public static void createDataTable()
         {
             dataTable = new DataTable();
             dataTable.Columns.Add("Place", typeof(int));
@@ -23,7 +23,7 @@ namespace Minesweeper
             dataTable.Columns.Add("Username", typeof(string));
             dataTable.Columns.Add("Date", typeof(string));
         }
-        public static void readRecords()
+        public static void readScoreboardDB_and_populateDataTable()
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             string selectQuery = "SELECT Score, Username, Date FROM ScoreboardTable ORDER BY Score DESC LIMIT 10";
@@ -50,14 +50,14 @@ namespace Minesweeper
             connection.Close();
         }
 
-        public static void writeRecord(int score, string date)
+        public static void writeScoreboardDB(int score, string date)
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
             string insertQuery = "INSERT INTO ScoreboardTable (Score, Username, Date) VALUES (@Score, @Username, @Date)";
             SQLiteCommand command = new SQLiteCommand(insertQuery, connection);
             command.Parameters.AddWithValue("@Score", score);
-            command.Parameters.AddWithValue("@Username", OptionsFileHandler.username);
+            command.Parameters.AddWithValue("@Username", Options.username);
             command.Parameters.AddWithValue("@Date", date);
             command.ExecuteNonQuery();
             connection.Close();

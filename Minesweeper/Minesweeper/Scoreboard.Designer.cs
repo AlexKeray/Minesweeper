@@ -42,7 +42,7 @@
             this.scoreboardToMenuBtn.TabIndex = 0;
             this.scoreboardToMenuBtn.Text = "menu";
             this.scoreboardToMenuBtn.UseVisualStyleBackColor = true;
-            this.scoreboardToMenuBtn.Click += new System.EventHandler(this.return_to_menu_from_scoreboard);
+            this.scoreboardToMenuBtn.Click += new System.EventHandler(this.close_Scoreboard);
             // 
             // scoreboardTable
             // 

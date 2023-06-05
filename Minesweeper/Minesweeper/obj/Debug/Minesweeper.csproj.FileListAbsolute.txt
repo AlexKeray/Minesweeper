@@ -10,7 +10,6 @@ C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.GameScreen.resources
-C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.OptionsMenu.resources
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.dll
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.dll
@@ -21,3 +20,4 @@ C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\EntityFramew
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\bin\Debug\System.Data.SQLite.xml
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CopyComplete
 C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Scoreboard.resources
+C:\Users\Kero\Desktop\Minesweeper\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Options.resources

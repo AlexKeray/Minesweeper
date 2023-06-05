@@ -17,35 +17,36 @@ namespace Minesweeper
             InitializeComponent();
         }
 
-        private void return_to_menu_from_scoreboard(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void Scoreboard_Load(object sender, EventArgs e)
         {
-            this.MaximizeBox = false;
-            this.BackColor = ColorTranslator.FromHtml("#d9d9d9");
-            ScoreboardDataManager.createDataTables();
-            ScoreboardDataManager.readRecords();
-            scoreboardTable.DataSource = ScoreboardDataManager.dataTable;
-            scoreboardFormat();
-            chooseScoreboardSize();
+            configure_scoreboard_settings();
+            load_scoreboardTable();                   // This is the actual scoreboard
+            configure_scoreboardTable_settings();
         }
 
-        private void chooseScoreboardSize()
+        private void configure_scoreboard_settings()
         {
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.BackColor = ColorTranslator.FromHtml("#d9d9d9");
             this.Size = new Size(724, 592);
         }
-        private void scoreboardFormat()
+
+        private void load_scoreboardTable()
         {
-            scoreboardTable.ColumnHeadersVisible = true;         //removing the extra stuff
-            scoreboardTable.RowHeadersVisible = false;            //removing the extra stuff
-            scoreboardTable.ReadOnly = true;                      //blocking unwanted midification from the user
-            scoreboardTable.ScrollBars = ScrollBars.None;         //blocking unwanted midification from the user
-            scoreboardTable.AllowUserToResizeRows = false;        //blocking unwanted midification from the user
-            scoreboardTable.AllowUserToResizeColumns = false;     //blocking unwanted midification from the user
-            scoreboardTable.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;   //centering content of the squares
+            ScoreboardDataBaseManager.createDataTable();
+            ScoreboardDataBaseManager.readScoreboardDB_and_populateDataTable();
+            scoreboardTable.DataSource = ScoreboardDataBaseManager.dataTable;
+        }
+        private void configure_scoreboardTable_settings()
+        {
+            scoreboardTable.ColumnHeadersVisible = true;         
+            scoreboardTable.RowHeadersVisible = false;            
+            scoreboardTable.ReadOnly = true;                      
+            scoreboardTable.ScrollBars = ScrollBars.None;         
+            scoreboardTable.AllowUserToResizeRows = false;        
+            scoreboardTable.AllowUserToResizeColumns = false;     
+            scoreboardTable.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;   
             scoreboardTable.Enabled = true;
             scoreboardTable.AllowUserToAddRows = false;
             scoreboardTable.DefaultCellStyle.Font = new Font("Microsoft Serif", 12, FontStyle.Regular);
@@ -63,6 +64,10 @@ namespace Minesweeper
                 scoreboardTable.Rows[i].Height = 42;
             }
             
+        }
+        private void close_Scoreboard(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

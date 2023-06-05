@@ -45,7 +45,7 @@
             this.startGameBtn.TabIndex = 0;
             this.startGameBtn.Text = "Start game";
             this.startGameBtn.UseVisualStyleBackColor = true;
-            this.startGameBtn.Click += new System.EventHandler(this.start_game);
+            this.startGameBtn.Click += new System.EventHandler(this.go_to_GameScreen);
             // 
             // optionsBtn
             // 
@@ -57,7 +57,7 @@
             this.optionsBtn.TabIndex = 2;
             this.optionsBtn.Text = "Options";
             this.optionsBtn.UseVisualStyleBackColor = true;
-            this.optionsBtn.Click += new System.EventHandler(this.go_to_options);
+            this.optionsBtn.Click += new System.EventHandler(this.go_to_Options);
             // 
             // exitApplicationBtn
             // 
@@ -69,7 +69,7 @@
             this.exitApplicationBtn.TabIndex = 3;
             this.exitApplicationBtn.Text = "Exit";
             this.exitApplicationBtn.UseVisualStyleBackColor = true;
-            this.exitApplicationBtn.Click += new System.EventHandler(this.exitApplicationBtn_Click);
+            this.exitApplicationBtn.Click += new System.EventHandler(this.go_to_Exit);
             // 
             // menuTitleLabel
             // 
@@ -91,7 +91,7 @@
             this.scoreboardBtn.TabIndex = 5;
             this.scoreboardBtn.Text = "Scoreboard";
             this.scoreboardBtn.UseVisualStyleBackColor = true;
-            this.scoreboardBtn.Click += new System.EventHandler(this.go_to_scoreboard);
+            this.scoreboardBtn.Click += new System.EventHandler(this.go_to_Scoreboard);
             // 
             // Menu
             // 
@@ -106,8 +106,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Menu";
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
-            this.LocationChanged += new System.EventHandler(this.Menu_LocationChanged);
+            this.Load += new System.EventHandler(this.load_menu);
+            this.LocationChanged += new System.EventHandler(this.change_initial_windows_position);
             this.ResumeLayout(false);
             this.PerformLayout();
 

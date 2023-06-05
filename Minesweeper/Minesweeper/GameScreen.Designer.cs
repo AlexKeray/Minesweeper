@@ -53,7 +53,7 @@
             this.gameScreenToMenuBtn.TabIndex = 0;
             this.gameScreenToMenuBtn.Text = "Menu";
             this.gameScreenToMenuBtn.UseVisualStyleBackColor = true;
-            this.gameScreenToMenuBtn.Click += new System.EventHandler(this.return_to_menu_from_gamescreen);
+            this.gameScreenToMenuBtn.Click += new System.EventHandler(this.close_Gamescreen);
             // 
             // minesField
             // 
@@ -63,7 +63,8 @@
             this.minesField.Name = "minesField";
             this.minesField.RowHeadersWidth = 51;
             this.minesField.RowTemplate.Height = 24;
-            this.minesField.Size = new System.Drawing.Size(790, 577);
+            this.minesField.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.minesField.Size = new System.Drawing.Size(1308, 648);
             this.minesField.TabIndex = 1;
             this.minesField.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.cellMouseClick);
             // 
@@ -77,7 +78,7 @@
             this.newGameBtn.TabIndex = 2;
             this.newGameBtn.Text = "New game";
             this.newGameBtn.UseVisualStyleBackColor = true;
-            this.newGameBtn.Click += new System.EventHandler(this.newGameBtn_Click);
+            this.newGameBtn.Click += new System.EventHandler(this.start_new_game);
             // 
             // totalBombsTextLabel
             // 
@@ -100,7 +101,6 @@
             this.totalBombsCountLabel.Size = new System.Drawing.Size(17, 20);
             this.totalBombsCountLabel.TabIndex = 4;
             this.totalBombsCountLabel.Text = "..";
-            this.totalBombsCountLabel.Click += new System.EventHandler(this.totalBombsCountLabel_Click);
             // 
             // totalEmptySquaresTextLabel
             // 
@@ -123,7 +123,6 @@
             this.totalEmptySquaresCountLabel.Size = new System.Drawing.Size(17, 20);
             this.totalEmptySquaresCountLabel.TabIndex = 6;
             this.totalEmptySquaresCountLabel.Text = "..";
-            this.totalEmptySquaresCountLabel.Click += new System.EventHandler(this.totalEmptySquaresCountLabel_Click);
             // 
             // emptySquaresLeftTextLabel
             // 
@@ -165,7 +164,7 @@
             this.scoreTextCountLabel.Location = new System.Drawing.Point(128, 179);
             this.scoreTextCountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scoreTextCountLabel.Name = "scoreTextCountLabel";
-            this.scoreTextCountLabel.Size = new System.Drawing.Size(35, 39);
+            this.scoreTextCountLabel.Size = new System.Drawing.Size(35, 38);
             this.scoreTextCountLabel.TabIndex = 10;
             this.scoreTextCountLabel.Text = "..";
             // 
@@ -181,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 683);
+            this.ClientSize = new System.Drawing.Size(1592, 683);
             this.Controls.Add(this.gameProgressBar);
             this.Controls.Add(this.scoreTextCountLabel);
             this.Controls.Add(this.scoreTextLabel);
@@ -197,7 +196,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
-            this.Load += new System.EventHandler(this.GameScreen_Load);
+            this.Load += new System.EventHandler(this.load_GameScreen);
             ((System.ComponentModel.ISupportInitialize)(this.minesField)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

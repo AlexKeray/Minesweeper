@@ -10,24 +10,21 @@ namespace Minesweeper
 {
     internal class OptionsFileHandler
     {
-        public static string difficulty;
-        public static string username;
-        
-        public static void ReadTextFile(string filePath)
+        public static void read_OptionsFile_and_initialise_difficulty_and_username(string filePath)
         {
             string[] options = File.ReadAllLines(filePath);
-            difficulty = options[0].ToString();
-            username = options[1].ToString();
+            Options.difficulty = options[0].ToString();
+            Options.username = options[1].ToString();
         }
 
-        public static void WriteTextFile(string filePath)
+        public static void write_OptionsFile(string filePath)
         {
             File.WriteAllText(filePath, string.Empty);
 
             StreamWriter writer = new StreamWriter(filePath);
 
-            writer.WriteLine(difficulty.ToString());
-            writer.WriteLine(username.ToString());
+            writer.WriteLine(Options.difficulty.ToString());
+            writer.WriteLine(Options.username.ToString());
 
             writer.Close();
 

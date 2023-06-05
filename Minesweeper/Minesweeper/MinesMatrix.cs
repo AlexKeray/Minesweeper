@@ -9,13 +9,13 @@ namespace Minesweeper
 {
     internal class MinesMatrix
     {
-        private int[,] matrix;
+        private int[,] matrix; // This is the matrix that powers the minesField
 
         public int[,] FetchMatrix(int rows, int cols, int mines_qty)
         {
-            InitializeMatrix(rows, cols);
+            InitializeMatrix(rows, cols); // Fills the matrx with 0, which represent empty cell in the minesField
             PlantMines(mines_qty);
-            FillEmptyCells();
+            FillEmptyCells(); // Iterates trough every empty cell and checks how many adjacent bombs are there.
             return matrix;
         }
         private void InitializeMatrix(int rows, int cols)
@@ -34,22 +34,21 @@ namespace Minesweeper
 
         private void PlantMines(int mines_qty)
         {
-            // Modify the matrix here
-            // Example: Set all elements to 1
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
+            int rows = matrix.GetLength(0); // FInding the limits of the matrix
+            int cols = matrix.GetLength(1); // FInding the limits of the matrix
 
             Random random = new Random();
-            int mine_x;     //random index of a new bomb
-            int mine_y;  //random index of a new bomb
+
+            int mine_x;     // random coordinate of the bomb
+            int mine_y;  // random coordinate of the bomb
 
             for (int i = 0; i < mines_qty; i++)
             {
                 mine_x = random.Next(0, rows);
                 mine_y = random.Next(0, cols);
                 if (matrix[mine_x, mine_y] != 0) //this is to escape the case when 
-                {                                                 //the random bomb is placed over another bomb
-                    i--;    //this makes the loop to do this iteration again, not to skip it
+                {                                // the random bomb is placed over another bomb
+                    i--;        //this makes the loop to do this iteration again, not to skip it
                     continue;
                 }
                 else
@@ -66,17 +65,14 @@ namespace Minesweeper
 
             int adjacent_bomb_counter;
 
-            for (int i = 0; i < rows; i++)     //iterating trough every element of the matrix
+            for (int i = 0; i < rows; i++)     
             {
                 for (int j = 0; j < cols; j++)
                 {
                     if (matrix[i, j] == 9)  //the bomb square doesnt need to change its value
                     { continue; }
                         
-                                    //there are case when the tile is at the border, so to not exeed the matrix
-                                    //some of the if-s are hard-coded, if a tile is in the middle, then all 8
-                                    //surrounding tiles are checked for bombs
-                    if (i == 0)     
+                    if (i == 0)     // checks if the adjacent cells are within the limits of the matrix
                     {
                         if (j == 0)
                         {

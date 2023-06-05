@@ -79,11 +79,11 @@
     </Compile>
     <Compile Include="MinesMatrix.cs" />
     <Compile Include="OptionsFileHandler.cs" />
-    <Compile Include="OptionsMenu.cs">
+    <Compile Include="Options.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OptionsMenu.Designer.cs">
-      <DependentUpon>OptionsMenu.cs</DependentUpon>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,15 +93,15 @@
     <Compile Include="Scoreboard.Designer.cs">
       <DependentUpon>Scoreboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ScoreboardDataManager.cs" />
+    <Compile Include="ScoreboardDataBaseManager.cs" />
     <EmbeddedResource Include="GameScreen.resx">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsMenu.resx">
-      <DependentUpon>OptionsMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
